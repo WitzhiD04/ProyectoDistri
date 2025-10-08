@@ -7,15 +7,17 @@ import org.zeromq.ZMQ;
 public class ActorDev {
 
     private int puerto;
+    private String host;
 
-    public ActorDev(int puerto) {
+    public ActorDev(String host, int puerto) {
         this.puerto  = puerto;
+        this.host = host;
     }
 
     public void devolucion () {
         try (ZContext context = new ZContext()) {
             ZMQ.Socket socket = context.createSocket(SocketType.SUB);
-            socket.connect("tcp://localhost:" + puerto);
+            socket.connect("tcp://" + host + ":" + puerto);
             socket.subscribe("");
             System.out.println("Actor Devolucion en linea");
 

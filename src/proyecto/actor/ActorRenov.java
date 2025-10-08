@@ -7,15 +7,17 @@ import org.zeromq.ZMQ;
 public class ActorRenov {
 
     private int puerto;
+    private String host;
 
-    public ActorRenov(int puerto) {
+    public ActorRenov(String host, int puerto) {
+        this.host = host;
         this.puerto = puerto;
     }
 
     public void renovacion () {
         try (ZContext context = new ZContext()) {
             ZMQ.Socket socket = context.createSocket(SocketType.SUB);
-            socket.connect("tcp://localhost:" + puerto);
+            socket.connect("tcp://" + host + ":" + puerto);
             socket.subscribe("");
             System.out.println("Actor Renovación en linea");
 

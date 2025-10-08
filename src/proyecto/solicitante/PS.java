@@ -33,9 +33,9 @@ public class PS {
             System.out.println("Procesando solicitudes para la SEDE " + sede);
 
             if (sede == 1) {
-                socket.connect("tcp://localhost:5000"); // GC sede 1
+                socket.connect("tcp://10.43.102.156:5000"); // GC sede 1
             } else if (sede == 2) {
-                socket.connect("tcp://localhost:5001"); // GC sede 2
+                socket.connect("tcp://10.43.103.95:5001"); // GC sede 2
             } else {
                 System.out.println("Sede no reconocida: " + sede);
                 br.close();

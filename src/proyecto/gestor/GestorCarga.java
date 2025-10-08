@@ -36,7 +36,7 @@ public class GestorCarga {
                 String tipo = tokenizer.nextToken();
                 int isbn = Integer.parseInt(tokenizer.nextToken());
 
-                String respuestaActor;
+                //String respuestaActor;
 
                 if (tipo.equals("DEVOLVER")) {
                     socket.send("Devolución del libro prestado con isbn: " + isbn);

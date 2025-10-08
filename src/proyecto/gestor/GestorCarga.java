@@ -23,9 +23,17 @@ public class GestorCarga {
             System.out.println("Gestor de Carga escuchando en " + direccion);
 
             ZMQ.Socket actorRenov = context.createSocket(SocketType.PUB);
-            actorRenov.bind("tcp://*:5002");
             ZMQ.Socket actorDev = context.createSocket(SocketType.PUB);
-            actorDev.bind("tcp://*:5003");
+
+            if (PUERTO_OPERACION == 5000) { //Sede 1, ver si dejar los puertos asi
+                actorRenov.bind("tcp://*:5002");
+                actorDev.bind("tcp://*:5003");
+            } else if (PUERTO_OPERACION == 5001) { // sede 2
+                actorRenov.bind("tcp://*:5004");
+                actorDev.bind("tcp://*:5005");
+            }
+
+
 
             while (!Thread.currentThread().isInterrupted()) {
                 byte[] mensaje = socket.recv();

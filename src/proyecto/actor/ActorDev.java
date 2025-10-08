@@ -6,11 +6,18 @@ import org.zeromq.ZMQ;
 
 public class ActorDev {
 
+    private int puerto;
+
+    public ActorDev(int puerto) {
+        this.puerto  = puerto;
+    }
+
     public void devolucion () {
         try (ZContext context = new ZContext()) {
             ZMQ.Socket socket = context.createSocket(SocketType.SUB);
-            socket.connect("tcp://localhost:5003");
+            socket.connect("tcp://localhost:" + puerto);
             socket.subscribe("");
+            System.out.println("Actor Devolucion en linea");
 
             while (!Thread.currentThread().isInterrupted()) {
                 byte[] mensaje = socket.recv();

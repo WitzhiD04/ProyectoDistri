@@ -6,7 +6,13 @@ import java.util.Scanner;
 
 public class ActorRenovMain {
 
+
     public static void main(String[] args) {
+
+        if (args.length == 0) {
+            System.err.println("Error: Debe proporcionar la dirección del host como argumento.");
+            System.exit(1);
+        }
 
         String host = args[0];
         Scanner s = new Scanner(System.in);

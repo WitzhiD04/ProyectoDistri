@@ -7,6 +7,11 @@ public class ActorDevMain {
 
     public static void main(String[] args) {
 
+        if (args.length == 0) {
+            System.err.println("Error: Debe proporcionar la dirección del host como argumento.");
+            System.exit(1);
+        }
+
         String host = args[0];
         Scanner s = new Scanner(System.in);
         System.out.println("Escoga de que sede es este actor (1 o 2)");

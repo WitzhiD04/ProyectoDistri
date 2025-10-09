@@ -26,6 +26,8 @@ public class ActorRenov {
                 String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
                 System.out.println("Mensaje recibido: " + mensajeString);
 
+                System.out.println("Renovación procesada de: " + mensajeString);
+
                 //String respuesta = "Renovación realizada para " + mensajeString;
                 //socket.send(respuesta.getBytes());
 

@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jeromq-0.6.0" level="project" />
+    <orderEntry type="library" name="gson-2.13.1" level="project" />
   </component>
 </module>

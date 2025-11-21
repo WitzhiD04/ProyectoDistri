@@ -24,6 +24,7 @@ public class GestorCarga {
 
             ZMQ.Socket actorRenov = context.createSocket(SocketType.PUB);
             ZMQ.Socket actorDev = context.createSocket(SocketType.PUB);
+            ZMQ.Socket actorPres = context.createSocket(SocketType.REQ);
 
             if (PUERTO_OPERACION == 5000) { //Sede 1, ver si dejar los puertos asi
                 actorRenov.bind("tcp://*:5002");
@@ -43,8 +44,6 @@ public class GestorCarga {
                 StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
                 String tipo = tokenizer.nextToken();
                 int isbn = Integer.parseInt(tokenizer.nextToken());
-
-                //String respuestaActor;
 
                 if (tipo.equals("DEVOLVER")) {
                     socket.send("Devolución del libro prestado con isbn: " + isbn);

@@ -2,7 +2,7 @@ package proyecto.entidades;
 
 public class Prestamo {
 
-    int id_prestamo;
+    String id_prestamo;
     String isbn;
     String sede_prestamo;
     String fecha_prestamo;
@@ -13,7 +13,7 @@ public class Prestamo {
 
     }
 
-    public Prestamo(int id_prestamo, String isbn, String sede_prestamo, String fecha_prestamo, String fecha_devolucion_estimada, String estado) {
+    public Prestamo(String id_prestamo, String isbn, String sede_prestamo, String fecha_prestamo, String fecha_devolucion_estimada, String estado) {
         this.id_prestamo = id_prestamo;
         this.isbn = isbn;
         this.sede_prestamo = sede_prestamo;
@@ -22,11 +22,11 @@ public class Prestamo {
         this.estado = estado;
     }
 
-    public int getId_prestamo() {
+    public String getId_prestamo() {
         return id_prestamo;
     }
 
-    public void setId_prestamo(int id_prestamo) {
+    public void setId_prestamo(String id_prestamo) {
         this.id_prestamo = id_prestamo;
     }
 

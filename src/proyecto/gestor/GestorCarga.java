@@ -29,12 +29,12 @@ public class GestorCarga {
             if (PUERTO_OPERACION == 5000) { //Sede 1, ver si dejar los puertos asi
                 actorRenov.bind("tcp://*:5002");
                 actorDev.bind("tcp://*:5003");
+                actorPres.connect("tcp://localhost:5006"); // Revisar despues que ip poner
             } else if (PUERTO_OPERACION == 5001) { // sede 2
                 actorRenov.bind("tcp://*:5004");
                 actorDev.bind("tcp://*:5005");
+                actorPres.connect("tcp://localhost:5007"); // Revisar despues que ip poner
             }
-
-
 
             while (!Thread.currentThread().isInterrupted()) {
                 byte[] mensaje = socket.recv();
@@ -44,6 +44,11 @@ public class GestorCarga {
                 StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
                 String tipo = tokenizer.nextToken();
                 int isbn = Integer.parseInt(tokenizer.nextToken());
+                if (PUERTO_OPERACION == 5000) {
+                    mensajeString = mensajeString + " sede1";
+                } else {
+                    mensajeString = mensajeString + " sede2";
+                }
 
                 if (tipo.equals("DEVOLVER")) {
                     socket.send("Devolución del libro prestado con isbn: " + isbn);
@@ -55,7 +60,12 @@ public class GestorCarga {
                     actorRenov.send(mensajeString);
                     //respuestaActor = actorRenov.recvStr();
                     //System.out.println(respuestaActor);
-                } else {
+                } else if (tipo.equals("PRESTAMO")) {
+                    actorPres.send(mensajeString);
+                    byte[] mensajePresByte = actorPres.recv();
+                    String mensajePres = new String(mensajePresByte, ZMQ.CHARSET).trim();
+                    socket.send("PRESTAMO: " + mensajePres);
+                }else {
                     socket.send("No se pudo encontrar un tipo válido de proceso");
                 }
             }

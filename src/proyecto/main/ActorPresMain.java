@@ -1,20 +1,21 @@
 package proyecto.main;
 
-import java.util.Scanner;
-import proyecto.actor.ActorDev;
+import proyecto.actor.ActorPres;
 
-public class ActorDevMain {
+import java.util.Scanner;
+
+public class ActorPresMain {
 
     public static void main(String[] args) {
 
-        if (args.length != 2) {
-            System.err.println("Error: Debe proporcionar la dirección del host del actor y del host remoto como argumento.");
+        if (args.length == 0) {
+            System.err.println("Error: Debe proporcionar el puerto del host remoto como argumento.");
             System.exit(1);
         }
 
-        String host = args[0];
-        String hostRemoto = args[1];
+        String hostRemoto = args[0];
         int puertoRemotoReplicacion;
+
         Scanner s = new Scanner(System.in);
         System.out.println("Escoga de que sede es este actor (1 o 2)");
         int sede = s.nextInt();
@@ -22,22 +23,21 @@ public class ActorDevMain {
         String idSede;
 
         if (sede == 1) {
-            puerto = 5003;
+            puerto = 5006;
             idSede = "sede1";
             puertoRemotoReplicacion = 6007;
         } else if (sede == 2) {
-            puerto = 5005;
+            puerto = 5007;
             idSede = "sede2";
             puertoRemotoReplicacion = 6006;
         } else {
+            System.out.println("Error: introduzca una sede");
             idSede = "0";
             puertoRemotoReplicacion = 0;
             System.exit(0);
-            System.out.println("Error: introduzca una sede");
-            System.exit(0);
         }
 
-        ActorDev actorDev = new ActorDev(host, puerto, hostRemoto, puertoRemotoReplicacion, idSede);
-        actorDev.devolucion();
+        ActorPres actorPres = new ActorPres(puerto, idSede, hostRemoto, puertoRemotoReplicacion);
+        actorPres.prestamo();
     }
 }

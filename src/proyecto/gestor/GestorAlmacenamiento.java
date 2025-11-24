@@ -62,7 +62,7 @@ public class GestorAlmacenamiento {
         return null;
     }
 
-    public Prestamo buscarPrestamo(String idPrestamo) {
+    public Prestamo buscarPrestamo(String isbn) {
         List<Prestamo> prestamos = datosBiblioteca.getPrestamos();
 
         if (prestamos == null) {
@@ -70,7 +70,7 @@ public class GestorAlmacenamiento {
         }
 
         for (Prestamo prestamo : prestamos) {
-            if (prestamo.getIsbn().equals(idPrestamo)) {
+            if (prestamo.getIsbn().equals(isbn) && "PRESTADO".equals(prestamo.getEstado())) {
                 return prestamo;
             }
         }
@@ -139,6 +139,7 @@ public class GestorAlmacenamiento {
             libro.setDisponibles_sede_2(libro.getDisponibles_sede_2() + 1);
         }
         LogOperacion log= new LogOperacion("LOG-DEV-" + prestamo.getId_prestamo(), fechaFormato.format(new Date()),"DEVOLUCION", sedeOperacion, gson.toJson(prestamo));
+        datosBiblioteca.getLog_operaciones().add(log);
         guardarCambios();
         System.out.println("Devolución registrada: " + isbn);
         return log;
@@ -153,7 +154,13 @@ public class GestorAlmacenamiento {
             return null;
         }
 
-        LogOperacion log = registrarDevolucion(isbn, sedeOperacion);
+        String fechaNueva = fechaFormato.format(new Date(System.currentTimeMillis() + (7L * 24L * 60L * 60L * 1000L)));
+        prestamo.setFecha_devolucion_estimada(fechaNueva);
+
+        LogOperacion log = new LogOperacion("LOG-REN-" + prestamo.getId_prestamo(), fechaFormato.format(new Date()),"RENOVACION", sedeOperacion, gson.toJson(prestamo));
+        datosBiblioteca.getLog_operaciones().add(log);
+        guardarCambios();
+        System.out.println("Renovación registrada: " + isbn);
         return log;
     }
 
@@ -174,17 +181,33 @@ public class GestorAlmacenamiento {
 
             if (logRemoto.getTipo().equals("PRESTAMO")) {
                 if (logRemoto.getNodo_emisor().equals("sede1")) {
-                    int actual = libro.getDisponibles_sede_2();
-                    libro.setDisponibles_sede_2(actual - 1);
-                } else {
                     int actual = libro.getDisponibles_sede_1();
                     libro.setDisponibles_sede_1(actual - 1);
+                } else {
+                    int actual = libro.getDisponibles_sede_2();
+                    libro.setDisponibles_sede_2(actual - 1);
                 }
-
                 datosBiblioteca.getPrestamos().add(prestamoAplicar);
                 datosBiblioteca.getLog_operaciones().add(logRemoto);
-            }
+            } else if (logRemoto.getTipo().equals("DEVOLVER")) {
+                if (logRemoto.getNodo_emisor().equals("sede1")) {
+                    int actual = libro.getDisponibles_sede_1();
+                    libro.setDisponibles_sede_1(actual + 1);
+                } else {
+                    int actual = libro.getDisponibles_sede_2();
+                    libro.setDisponibles_sede_2(actual + 1);
+                }
+                Prestamo pLocal = buscarPrestamo(prestamoAplicar.getIsbn());
+                if (pLocal != null) {
+                    pLocal.setEstado("DEVUELTO");
+                }
+            } else if (logRemoto.getTipo().equals("RENOVAR")) {
+                Prestamo pLocal = buscarPrestamo(prestamoAplicar.getIsbn());
+                if (pLocal != null) {
+                    pLocal.setFecha_devolucion_estimada(prestamoAplicar.getFecha_devolucion_estimada());
+                }
 
+            }
             guardarCambios();
             System.out.println("Log Aplicado correctamente.");
             return true;
@@ -201,5 +224,12 @@ public class GestorAlmacenamiento {
         }
         return null;
     }
-}
 
+    public String getIdSede() {
+        return idSede;
+    }
+
+    public void setIdSede(String idSede) {
+        this.idSede = idSede;
+    }
+}

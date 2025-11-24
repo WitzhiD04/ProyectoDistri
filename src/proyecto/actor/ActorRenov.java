@@ -1,17 +1,29 @@
 package proyecto.actor;
 
+import com.google.gson.Gson;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import proyecto.entidades.LogOperacion;
+import proyecto.gestor.GestorAlmacenamiento;
+
+import java.util.StringTokenizer;
 
 public class ActorRenov {
 
     private int puerto;
     private String host;
+    private GestorAlmacenamiento ga;
+    private final Gson gson = new Gson();
+    private final String hostRemoto;
+    private final int puertoReplicacionRemoto;
 
-    public ActorRenov(String host, int puerto) {
+    public ActorRenov(String host, int puerto, String hostRemoto, int puertoReplicacionRemoto, String sede) {
         this.host = host;
         this.puerto = puerto;
+        this.hostRemoto = hostRemoto;
+        this.puertoReplicacionRemoto = puertoReplicacionRemoto;
+        this.ga = new GestorAlmacenamiento(sede);
     }
 
     public void renovacion () {
@@ -26,11 +38,25 @@ public class ActorRenov {
                 String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
                 System.out.println("Mensaje recibido: " + mensajeString);
 
-                System.out.println("Renovación procesada de: " + mensajeString);
+                ZMQ.Socket socketReplicacion = context.createSocket(SocketType.PUSH);
+                socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
 
-                //String respuesta = "Renovación realizada para " + mensajeString;
-                //socket.send(respuesta.getBytes());
+                StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
+                tokenizer.nextToken();
+                String isbn = tokenizer.nextToken();
 
+                LogOperacion log = ga.registrarRenovacion(isbn, ga.getIdSede());
+                String mensajePS;
+
+                if (log == null) {
+                    mensajePS = "No se pudó realizar la renovación exitosamente";
+                } else {
+                    mensajePS = "Renovación exitosa con id: " + log.getId_operacion();
+                    String jsonLog = gson.toJson(log);
+                    socketReplicacion.send(jsonLog.getBytes(ZMQ.CHARSET), 0);
+                    System.out.println("Log de replicación enviado a Sede Remota.");
+                }
+                socket.send(mensajePS);
             }
         }
     }

@@ -40,6 +40,11 @@ public class GestorCarga {
                 byte[] mensaje = socket.recv();
                 String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
 
+                if (mensajeString.equals("PING_GC")) {
+                    socket.send("PONG_GC".getBytes(ZMQ.CHARSET), 0);
+                    continue;
+                }
+
                 System.out.println("Mensaje recibido: " + mensajeString);
                 StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
                 String tipo = tokenizer.nextToken();

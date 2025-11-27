@@ -20,12 +20,14 @@ public class GestorAlmacenamiento {
     private String idSede;
     private String nomArchivo;
     private DatosBiblioteca datosBiblioteca;
+    private boolean esMaster;
     private static final SimpleDateFormat fechaFormato = new SimpleDateFormat("yyyy-MM-dd");
 
     public GestorAlmacenamiento(String idSede) {
         this.idSede = idSede;
         datosBiblioteca = new DatosBiblioteca();
         this.nomArchivo = "./db/" + idSede + "/biblioteca_data.json";
+        this.esMaster = idSede.equals("sede1");
         cargarDatos();
     }
 
@@ -80,6 +82,11 @@ public class GestorAlmacenamiento {
     public synchronized LogOperacion registrarPrestamo (String isbn, String sedeOperacion) {
         Libro libroPres = buscarLibro(isbn);
 
+        if (!this.esMaster) {
+            System.err.println("Fallo Préstamo: Soy SLAVE, solo acepto logs remotos, no operaciones locales.");
+            return null;
+        }
+
         if (libroPres == null) {
             System.out.println("Fallo Préstamo: Libro no existe.");
             return null;
@@ -120,6 +127,11 @@ public class GestorAlmacenamiento {
     public synchronized LogOperacion registrarDevolucion(String isbn, String sedeOperacion) {
         Prestamo prestamo = buscarPrestamo(isbn);
 
+        if (!this.esMaster) {
+            System.err.println("Fallo Préstamo: Soy SLAVE, solo acepto logs remotos, no operaciones locales.");
+            return null;
+        }
+
         if (prestamo == null) {
             System.out.println("Fallo Devolucion: Prestamo no existe.");
             return null;
@@ -148,6 +160,11 @@ public class GestorAlmacenamiento {
     public synchronized LogOperacion registrarRenovacion(String isbn, String sedeOperacion) {
 
         Prestamo prestamo = buscarPrestamo(isbn);
+
+        if (!this.esMaster) {
+            System.err.println("Fallo Préstamo: Soy SLAVE, solo acepto logs remotos, no operaciones locales.");
+            return null;
+        }
 
         if (prestamo == null) {
             System.out.println("Fallo Renovación: Prestamo no existe.");
@@ -231,5 +248,29 @@ public class GestorAlmacenamiento {
 
     public void setIdSede(String idSede) {
         this.idSede = idSede;
+    }
+
+    public synchronized List<LogOperacion> obtenerLogsDesde(String ultimoLogIdRemoto) {
+        List<LogOperacion> logs = datosBiblioteca.getLog_operaciones();
+        if (logs == null || logs.isEmpty()) {
+            return List.of();
+        }
+
+        int indiceInicio = -1;
+        for (int i = 0; i < logs.size(); i++) {
+            if (logs.get(i).getId_operacion().equals(ultimoLogIdRemoto)) {
+                indiceInicio = i;
+                break;
+            }
+        }
+
+        if (indiceInicio == -1 || indiceInicio == logs.size() - 1) {
+            return List.of();
+        }
+
+        return logs.subList(indiceInicio + 1, logs.size());
+    }
+    public boolean esMaster() {
+        return this.esMaster;
     }
 }

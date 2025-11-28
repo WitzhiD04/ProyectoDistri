@@ -84,4 +84,29 @@ public class ReceptorReplicacion implements Runnable {
             System.err.println("Error en Servidor Logs (REP): " + e.getMessage());
         }
     }
+
+    public void iniciarRecuperacionDeLogs(String hostRemoto, int puertoServidorLogsRemoto) {
+        try (ZContext context = new ZContext()) {
+            ZMQ.Socket socketRecuperacion = context.createSocket(SocketType.REQ);
+            socketRecuperacion.connect("tcp://" + hostRemoto + ":" + puertoServidorLogsRemoto);
+            System.out.println("Intentando conexión de recuperación con el GA remoto...");
+
+            // 1. Obtener mi último Log conocido
+            LogOperacion ultimoLog = ga.obtenerUltimoLog();
+            String idLogLocal = ultimoLog != null ? ultimoLog.getId_operacion() : "N/A";
+
+            // 2. Enviar solicitud
+            String mensajePeticion = "DAME_LOGS_DESDE " + idLogLocal;
+            socketRecuperacion.send(mensajePeticion.getBytes(ZMQ.CHARSET), 0);
+            System.out.println("Solicitando logs a la Sede Remota: " + mensajePeticion);
+
+            // 3. Recibir la respuesta (bloque JSON de logs)
+            String jsonLogs = socketRecuperacion.recvStr();
+
+            // ... (Falta la lógica para parsear el JSON y aplicar los logs) ...
+
+        } catch (Exception e) {
+            System.err.println("Error en la recuperación de logs: " + e.getMessage());
+        }
+    }
 }

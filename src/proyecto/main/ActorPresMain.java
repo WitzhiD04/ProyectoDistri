@@ -29,7 +29,7 @@ public class ActorPresMain {
         } else if (sede == 2) {
             puerto = 5007;
             idSede = "sede2";
-            puertoRemotoReplicacion = 6006;
+            puertoRemotoReplicacion = 6007;
         } else {
             System.out.println("Error: introduzca una sede");
             idSede = "0";

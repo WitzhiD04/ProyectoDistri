@@ -40,62 +40,60 @@ public class GestorCarga {
                 actorPres.connect("tcp://localhost:5007");
             }
 
-            // Configurar poller para manejar múltiples sockets
-            ZMQ.Poller poller = context.createPoller(1);
-            poller.register(socket, ZMQ.Poller.POLLIN);
+            // Dar tiempo a los sockets PUB para establecerse
+            Thread.sleep(100);
 
             System.out.println("Gestor de Carga listo para recibir peticiones");
 
             while (!Thread.currentThread().isInterrupted()) {
-                poller.poll(100); // Poll cada 100ms
+                byte[] mensaje = socket.recv(0);
+                String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
 
-                if (poller.pollin(0)) {
-                    byte[] mensaje = socket.recv(ZMQ.DONTWAIT);
-                    if (mensaje == null) continue;
+                // Healthcheck
+                if (mensajeString.equals("PING")) {
+                    socket.send("PONG " + ID_SEDE);
+                    System.out.println("Respondido PING con PONG " + ID_SEDE);
+                    continue;
+                }
 
-                    String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
+                System.out.println("Mensaje recibido: " + mensajeString);
 
-                    // Healthcheck
-                    if (mensajeString.equals("PING")) {
-                        socket.send("PONG " + ID_SEDE);
-                        System.out.println("Respondido PING con PONG " + ID_SEDE);
-                        continue;
+                try {
+                    StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
+                    String tipo = tokenizer.nextToken();
+                    String isbn = tokenizer.nextToken();
+
+                    String mensajeConSede = mensajeString + " " + ID_SEDE;
+
+                    switch (tipo) {
+                        case "DEVOLVER":
+                            // PUB: enviar y responder inmediatamente (fire and forget)
+                            actorDev.send(mensajeConSede);
+                            socket.send("Procesando devolución del libro con ISBN: " + isbn);
+                            System.out.println("Devolución publicada para procesamiento");
+                            break;
+
+                        case "RENOVAR":
+                            // PUB: enviar y responder inmediatamente (fire and forget)
+                            actorRenov.send(mensajeConSede);
+                            socket.send("Procesando renovación del libro con ISBN: " + isbn);
+                            System.out.println("Renovación publicada para procesamiento");
+                            break;
+
+                        case "PRESTAMO":
+                            // REQ-REP: esperar respuesta del actor
+                            actorPres.send(mensajeConSede);
+                            byte[] mensajePresByte = actorPres.recv();
+                            String mensajePres = new String(mensajePresByte, ZMQ.CHARSET).trim();
+                            socket.send("PRESTAMO: " + mensajePres);
+                            break;
+
+                        default:
+                            socket.send("ERROR: Tipo de operación no válido: " + tipo);
                     }
-
-                    System.out.println("Mensaje recibido: " + mensajeString);
-
-                    try {
-                        StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
-                        String tipo = tokenizer.nextToken();
-                        String isbn = tokenizer.nextToken();
-
-                        String mensajeConSede = mensajeString + " " + ID_SEDE;
-
-                        switch (tipo) {
-                            case "DEVOLVER":
-                                socket.send("Procesando devolución del libro con ISBN: " + isbn);
-                                actorDev.send(mensajeConSede);
-                                break;
-
-                            case "RENOVAR":
-                                socket.send("Procesando renovación del libro con ISBN: " + isbn);
-                                actorRenov.send(mensajeConSede);
-                                break;
-
-                            case "PRESTAMO":
-                                actorPres.send(mensajeConSede);
-                                byte[] mensajePresByte = actorPres.recv();
-                                String mensajePres = new String(mensajePresByte, ZMQ.CHARSET).trim();
-                                socket.send("PRESTAMO: " + mensajePres);
-                                break;
-
-                            default:
-                                socket.send("ERROR: Tipo de operación no válido: " + tipo);
-                        }
-                    } catch (Exception e) {
-                        socket.send("ERROR: Formato de mensaje inválido");
-                        System.err.println("Error procesando mensaje: " + e.getMessage());
-                    }
+                } catch (Exception e) {
+                    socket.send("ERROR: Formato de mensaje inválido");
+                    System.err.println("Error procesando mensaje: " + e.getMessage());
                 }
             }
         } catch (Exception e) {

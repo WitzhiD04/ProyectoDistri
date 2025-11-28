@@ -1,3 +1,4 @@
+
 package proyecto.actor;
 
 import com.google.gson.Gson;
@@ -33,30 +34,30 @@ public class ActorRenov {
             socket.subscribe("");
             System.out.println("Actor Renovación en linea");
 
+            ZMQ.Socket socketReplicacion = context.createSocket(SocketType.PUSH);
+            socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
+
             while (!Thread.currentThread().isInterrupted()) {
                 byte[] mensaje = socket.recv();
                 String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
                 System.out.println("Mensaje recibido: " + mensajeString);
-
-                ZMQ.Socket socketReplicacion = context.createSocket(SocketType.PUSH);
-                socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
 
                 StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
                 tokenizer.nextToken();
                 String isbn = tokenizer.nextToken();
 
                 LogOperacion log = ga.registrarRenovacion(isbn, ga.getIdSede());
-                String mensajePS;
 
                 if (log == null) {
-                    mensajePS = "No se pudó realizar la renovación exitosamente";
+                    System.err.println("No se pudo realizar la renovación exitosamente");
                 } else {
-                    mensajePS = "Renovación exitosa con id: " + log.getId_operacion();
+                    System.out.println("Renovación exitosa con id: " + log.getId_operacion());
                     String jsonLog = gson.toJson(log);
                     socketReplicacion.send(jsonLog.getBytes(ZMQ.CHARSET), 0);
                     System.out.println("Log de replicación enviado a Sede Remota.");
                 }
-                socket.send(mensajePS);
+
+                // SUB no puede enviar respuesta, solo procesa
             }
         }
     }

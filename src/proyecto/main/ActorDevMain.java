@@ -24,11 +24,11 @@ public class ActorDevMain {
         if (sede == 1) {
             puerto = 5003;
             idSede = "sede1";
-            puertoRemotoReplicacion = 6007;
+            puertoRemotoReplicacion = 6006;
         } else if (sede == 2) {
             puerto = 5005;
             idSede = "sede2";
-            puertoRemotoReplicacion = 6006;
+            puertoRemotoReplicacion = 6007;
         } else {
             idSede = "0";
             puertoRemotoReplicacion = 0;

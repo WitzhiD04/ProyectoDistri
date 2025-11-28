@@ -21,7 +21,7 @@
       "titulo": "Patrones de Diseño de Software (Vol. 1)",
       "autor": "Thomas H. Cormen",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 7,
+      "disponibles_sede_1": 8,
       "disponibles_sede_2": 3
     },
     {
@@ -37,7 +37,7 @@
       "titulo": "Seguridad en Sistemas Operativos (Vol. 1)",
       "autor": "Bjarne Stroustrup",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 7,
+      "disponibles_sede_1": 8,
       "disponibles_sede_2": 3
     },
     {
@@ -53,7 +53,7 @@
       "titulo": "Machine Learning Aplicado (Vol. 1)",
       "autor": "Grace Hopper",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 7,
+      "disponibles_sede_1": 8,
       "disponibles_sede_2": 3
     },
     {
@@ -61,7 +61,7 @@
       "titulo": "Algoritmos Paralelos (Vol. 1)",
       "autor": "Alan Turing",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 7,
+      "disponibles_sede_1": 8,
       "disponibles_sede_2": 3
     },
     {
@@ -85,7 +85,7 @@
       "titulo": "Sistemas Distribuidos: Principios (Vol. 2)",
       "autor": "Andrew S. Tanenbaum",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 8,
+      "disponibles_sede_1": 9,
       "disponibles_sede_2": 2
     },
     {
@@ -117,7 +117,7 @@
       "titulo": "Seguridad en Sistemas Operativos (Vol. 2)",
       "autor": "Bjarne Stroustrup",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 8,
+      "disponibles_sede_1": 9,
       "disponibles_sede_2": 2
     },
     {
@@ -141,7 +141,7 @@
       "titulo": "Algoritmos Paralelos (Vol. 2)",
       "autor": "Alan Turing",
       "total_ejemplares": 20,
-      "disponibles_sede_1": 8,
+      "disponibles_sede_1": 9,
       "disponibles_sede_2": 2
     },
     {
@@ -8001,192 +8001,170 @@
       "disponibles_sede_2": 10
     }
   ],
-
   "prestamos": [
     {
       "id_prestamo": "P000001",
       "isbn": "L0001",
-      "codigo_cliente": "C002",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000002",
       "isbn": "L0002",
-      "codigo_cliente": "C003",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000003",
       "isbn": "L0003",
-      "codigo_cliente": "C004",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000004",
       "isbn": "L0004",
-      "codigo_cliente": "C005",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000005",
       "isbn": "L0005",
-      "codigo_cliente": "C006",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000006",
       "isbn": "L0006",
-      "codigo_cliente": "C007",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000007",
       "isbn": "L0007",
-      "codigo_cliente": "C008",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000008",
       "isbn": "L0008",
-      "codigo_cliente": "C009",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000009",
       "isbn": "L0009",
-      "codigo_cliente": "C010",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000010",
       "isbn": "L0010",
-      "codigo_cliente": "C011",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000011",
       "isbn": "L0011",
-      "codigo_cliente": "C012",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000012",
       "isbn": "L0012",
-      "codigo_cliente": "C013",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000013",
       "isbn": "L0013",
-      "codigo_cliente": "C014",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000014",
       "isbn": "L0014",
-      "codigo_cliente": "C015",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000015",
       "isbn": "L0015",
-      "codigo_cliente": "C016",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000016",
       "isbn": "L0016",
-      "codigo_cliente": "C017",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000017",
       "isbn": "L0017",
-      "codigo_cliente": "C018",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000018",
       "isbn": "L0018",
-      "codigo_cliente": "C019",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
-      "estado": "PRESTADO"
+      "estado": "DEVUELTO"
     },
     {
       "id_prestamo": "P000019",
       "isbn": "L0019",
-      "codigo_cliente": "C020",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000020",
       "isbn": "L0020",
-      "codigo_cliente": "C021",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
-      "fecha_devolucion_estimada": "2025-11-30",
+      "fecha_devolucion_estimada": "2025-12-04",
       "estado": "PRESTADO"
     },
     {
       "id_prestamo": "P000021",
       "isbn": "L0001",
-      "codigo_cliente": "C022",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
@@ -8195,7 +8173,6 @@
     {
       "id_prestamo": "P000022",
       "isbn": "L0002",
-      "codigo_cliente": "C023",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
@@ -8204,7 +8181,6 @@
     {
       "id_prestamo": "P000023",
       "isbn": "L0003",
-      "codigo_cliente": "C024",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-16",
       "fecha_devolucion_estimada": "2025-11-30",
@@ -8213,7 +8189,6 @@
     {
       "id_prestamo": "P000024",
       "isbn": "L0004",
-      "codigo_cliente": "C025",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8222,7 +8197,6 @@
     {
       "id_prestamo": "P000025",
       "isbn": "L0005",
-      "codigo_cliente": "C026",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8231,7 +8205,6 @@
     {
       "id_prestamo": "P000026",
       "isbn": "L0006",
-      "codigo_cliente": "C027",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8240,7 +8213,6 @@
     {
       "id_prestamo": "P000027",
       "isbn": "L0007",
-      "codigo_cliente": "C028",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8249,7 +8221,6 @@
     {
       "id_prestamo": "P000028",
       "isbn": "L0008",
-      "codigo_cliente": "C029",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8258,7 +8229,6 @@
     {
       "id_prestamo": "P000029",
       "isbn": "L0009",
-      "codigo_cliente": "C030",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8267,7 +8237,6 @@
     {
       "id_prestamo": "P000030",
       "isbn": "L0010",
-      "codigo_cliente": "C031",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8276,7 +8245,6 @@
     {
       "id_prestamo": "P000031",
       "isbn": "L0011",
-      "codigo_cliente": "C032",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8285,7 +8253,6 @@
     {
       "id_prestamo": "P000032",
       "isbn": "L0012",
-      "codigo_cliente": "C033",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8294,7 +8261,6 @@
     {
       "id_prestamo": "P000033",
       "isbn": "L0013",
-      "codigo_cliente": "C034",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8303,7 +8269,6 @@
     {
       "id_prestamo": "P000034",
       "isbn": "L0014",
-      "codigo_cliente": "C035",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8312,7 +8277,6 @@
     {
       "id_prestamo": "P000035",
       "isbn": "L0015",
-      "codigo_cliente": "C036",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8321,7 +8285,6 @@
     {
       "id_prestamo": "P000036",
       "isbn": "L0016",
-      "codigo_cliente": "C037",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8330,7 +8293,6 @@
     {
       "id_prestamo": "P000037",
       "isbn": "L0017",
-      "codigo_cliente": "C038",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8339,7 +8301,6 @@
     {
       "id_prestamo": "P000038",
       "isbn": "L0018",
-      "codigo_cliente": "C039",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8348,7 +8309,6 @@
     {
       "id_prestamo": "P000039",
       "isbn": "L0019",
-      "codigo_cliente": "C040",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8357,7 +8317,6 @@
     {
       "id_prestamo": "P000040",
       "isbn": "L0020",
-      "codigo_cliente": "C041",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8366,7 +8325,6 @@
     {
       "id_prestamo": "P000041",
       "isbn": "L0001",
-      "codigo_cliente": "C042",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8375,7 +8333,6 @@
     {
       "id_prestamo": "P000042",
       "isbn": "L0002",
-      "codigo_cliente": "C043",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8384,7 +8341,6 @@
     {
       "id_prestamo": "P000043",
       "isbn": "L0003",
-      "codigo_cliente": "C044",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8393,7 +8349,6 @@
     {
       "id_prestamo": "P000044",
       "isbn": "L0004",
-      "codigo_cliente": "C045",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8402,7 +8357,6 @@
     {
       "id_prestamo": "P000045",
       "isbn": "L0005",
-      "codigo_cliente": "C046",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8411,7 +8365,6 @@
     {
       "id_prestamo": "P000046",
       "isbn": "L0006",
-      "codigo_cliente": "C047",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8420,7 +8373,6 @@
     {
       "id_prestamo": "P000047",
       "isbn": "L0007",
-      "codigo_cliente": "C048",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-17",
       "fecha_devolucion_estimada": "2025-12-01",
@@ -8429,7 +8381,6 @@
     {
       "id_prestamo": "P000048",
       "isbn": "L0008",
-      "codigo_cliente": "C049",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8438,7 +8389,6 @@
     {
       "id_prestamo": "P000049",
       "isbn": "L0009",
-      "codigo_cliente": "C050",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8447,7 +8397,6 @@
     {
       "id_prestamo": "P000050",
       "isbn": "L0010",
-      "codigo_cliente": "C051",
       "sede_prestamo": "Sede 1",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8456,7 +8405,6 @@
     {
       "id_prestamo": "P000051",
       "isbn": "L0011",
-      "codigo_cliente": "C052",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8465,7 +8413,6 @@
     {
       "id_prestamo": "P000052",
       "isbn": "L0012",
-      "codigo_cliente": "C053",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8474,7 +8421,6 @@
     {
       "id_prestamo": "P000053",
       "isbn": "L0013",
-      "codigo_cliente": "C054",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8483,7 +8429,6 @@
     {
       "id_prestamo": "P000054",
       "isbn": "L0014",
-      "codigo_cliente": "C055",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8492,7 +8437,6 @@
     {
       "id_prestamo": "P000055",
       "isbn": "L0015",
-      "codigo_cliente": "C056",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8501,7 +8445,6 @@
     {
       "id_prestamo": "P000056",
       "isbn": "L0016",
-      "codigo_cliente": "C057",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8510,7 +8453,6 @@
     {
       "id_prestamo": "P000057",
       "isbn": "L0017",
-      "codigo_cliente": "C058",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8519,7 +8461,6 @@
     {
       "id_prestamo": "P000058",
       "isbn": "L0018",
-      "codigo_cliente": "C059",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8528,7 +8469,6 @@
     {
       "id_prestamo": "P000059",
       "isbn": "L0019",
-      "codigo_cliente": "C060",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8537,7 +8477,6 @@
     {
       "id_prestamo": "P000060",
       "isbn": "L0020",
-      "codigo_cliente": "C061",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8546,7 +8485,6 @@
     {
       "id_prestamo": "P000061",
       "isbn": "L0001",
-      "codigo_cliente": "C062",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8555,7 +8493,6 @@
     {
       "id_prestamo": "P000062",
       "isbn": "L0002",
-      "codigo_cliente": "C063",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8564,7 +8501,6 @@
     {
       "id_prestamo": "P000063",
       "isbn": "L0003",
-      "codigo_cliente": "C064",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8573,7 +8509,6 @@
     {
       "id_prestamo": "P000064",
       "isbn": "L0004",
-      "codigo_cliente": "C065",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8582,7 +8517,6 @@
     {
       "id_prestamo": "P000065",
       "isbn": "L0005",
-      "codigo_cliente": "C066",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8591,7 +8525,6 @@
     {
       "id_prestamo": "P000066",
       "isbn": "L0006",
-      "codigo_cliente": "C067",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8600,7 +8533,6 @@
     {
       "id_prestamo": "P000067",
       "isbn": "L0007",
-      "codigo_cliente": "C068",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8609,7 +8541,6 @@
     {
       "id_prestamo": "P000068",
       "isbn": "L0008",
-      "codigo_cliente": "C069",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8618,7 +8549,6 @@
     {
       "id_prestamo": "P000069",
       "isbn": "L0009",
-      "codigo_cliente": "C070",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8627,7 +8557,6 @@
     {
       "id_prestamo": "P000070",
       "isbn": "L0010",
-      "codigo_cliente": "C071",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8636,7 +8565,6 @@
     {
       "id_prestamo": "P000071",
       "isbn": "L0011",
-      "codigo_cliente": "C072",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-18",
       "fecha_devolucion_estimada": "2025-12-02",
@@ -8645,7 +8573,6 @@
     {
       "id_prestamo": "P000072",
       "isbn": "L0012",
-      "codigo_cliente": "C073",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8654,7 +8581,6 @@
     {
       "id_prestamo": "P000073",
       "isbn": "L0013",
-      "codigo_cliente": "C074",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8663,7 +8589,6 @@
     {
       "id_prestamo": "P000074",
       "isbn": "L0014",
-      "codigo_cliente": "C075",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8672,7 +8597,6 @@
     {
       "id_prestamo": "P000075",
       "isbn": "L0015",
-      "codigo_cliente": "C076",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8681,7 +8605,6 @@
     {
       "id_prestamo": "P000076",
       "isbn": "L0016",
-      "codigo_cliente": "C077",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8690,7 +8613,6 @@
     {
       "id_prestamo": "P000077",
       "isbn": "L0017",
-      "codigo_cliente": "C078",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8699,7 +8621,6 @@
     {
       "id_prestamo": "P000078",
       "isbn": "L0018",
-      "codigo_cliente": "C079",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8708,7 +8629,6 @@
     {
       "id_prestamo": "P000079",
       "isbn": "L0019",
-      "codigo_cliente": "C080",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8717,7 +8637,6 @@
     {
       "id_prestamo": "P000080",
       "isbn": "L0020",
-      "codigo_cliente": "C081",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8726,7 +8645,6 @@
     {
       "id_prestamo": "P000081",
       "isbn": "L0001",
-      "codigo_cliente": "C082",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8735,7 +8653,6 @@
     {
       "id_prestamo": "P000082",
       "isbn": "L0002",
-      "codigo_cliente": "C083",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8744,7 +8661,6 @@
     {
       "id_prestamo": "P000083",
       "isbn": "L0003",
-      "codigo_cliente": "C084",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8753,7 +8669,6 @@
     {
       "id_prestamo": "P000084",
       "isbn": "L0004",
-      "codigo_cliente": "C085",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8762,7 +8677,6 @@
     {
       "id_prestamo": "P000085",
       "isbn": "L0005",
-      "codigo_cliente": "C086",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8771,7 +8685,6 @@
     {
       "id_prestamo": "P000086",
       "isbn": "L0006",
-      "codigo_cliente": "C087",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8780,7 +8693,6 @@
     {
       "id_prestamo": "P000087",
       "isbn": "L0007",
-      "codigo_cliente": "C088",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8789,7 +8701,6 @@
     {
       "id_prestamo": "P000088",
       "isbn": "L0008",
-      "codigo_cliente": "C089",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8798,7 +8709,6 @@
     {
       "id_prestamo": "P000089",
       "isbn": "L0009",
-      "codigo_cliente": "C090",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8807,7 +8717,6 @@
     {
       "id_prestamo": "P000090",
       "isbn": "L0010",
-      "codigo_cliente": "C091",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8816,7 +8725,6 @@
     {
       "id_prestamo": "P000091",
       "isbn": "L0011",
-      "codigo_cliente": "C092",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8825,7 +8733,6 @@
     {
       "id_prestamo": "P000092",
       "isbn": "L0012",
-      "codigo_cliente": "C093",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8834,7 +8741,6 @@
     {
       "id_prestamo": "P000093",
       "isbn": "L0013",
-      "codigo_cliente": "C094",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8843,7 +8749,6 @@
     {
       "id_prestamo": "P000094",
       "isbn": "L0014",
-      "codigo_cliente": "C095",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8852,7 +8757,6 @@
     {
       "id_prestamo": "P000095",
       "isbn": "L0015",
-      "codigo_cliente": "C096",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-19",
       "fecha_devolucion_estimada": "2025-12-03",
@@ -8861,7 +8765,6 @@
     {
       "id_prestamo": "P000096",
       "isbn": "L0016",
-      "codigo_cliente": "C097",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8870,7 +8773,6 @@
     {
       "id_prestamo": "P000097",
       "isbn": "L0017",
-      "codigo_cliente": "C098",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8879,7 +8781,6 @@
     {
       "id_prestamo": "P000098",
       "isbn": "L0018",
-      "codigo_cliente": "C099",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8888,7 +8789,6 @@
     {
       "id_prestamo": "P000099",
       "isbn": "L0019",
-      "codigo_cliente": "C100",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8897,7 +8797,6 @@
     {
       "id_prestamo": "P000100",
       "isbn": "L0020",
-      "codigo_cliente": "C101",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8906,7 +8805,6 @@
     {
       "id_prestamo": "P000101",
       "isbn": "L0001",
-      "codigo_cliente": "C102",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8915,7 +8813,6 @@
     {
       "id_prestamo": "P000102",
       "isbn": "L0002",
-      "codigo_cliente": "C103",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8924,7 +8821,6 @@
     {
       "id_prestamo": "P000103",
       "isbn": "L0003",
-      "codigo_cliente": "C104",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8933,7 +8829,6 @@
     {
       "id_prestamo": "P000104",
       "isbn": "L0004",
-      "codigo_cliente": "C105",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8942,7 +8837,6 @@
     {
       "id_prestamo": "P000105",
       "isbn": "L0005",
-      "codigo_cliente": "C106",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8951,7 +8845,6 @@
     {
       "id_prestamo": "P000106",
       "isbn": "L0006",
-      "codigo_cliente": "C107",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8960,7 +8853,6 @@
     {
       "id_prestamo": "P000107",
       "isbn": "L0007",
-      "codigo_cliente": "C108",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8969,7 +8861,6 @@
     {
       "id_prestamo": "P000108",
       "isbn": "L0008",
-      "codigo_cliente": "C109",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8978,7 +8869,6 @@
     {
       "id_prestamo": "P000109",
       "isbn": "L0009",
-      "codigo_cliente": "C110",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8987,7 +8877,6 @@
     {
       "id_prestamo": "P000110",
       "isbn": "L0010",
-      "codigo_cliente": "C111",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -8996,7 +8885,6 @@
     {
       "id_prestamo": "P000111",
       "isbn": "L0011",
-      "codigo_cliente": "C112",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9005,7 +8893,6 @@
     {
       "id_prestamo": "P000112",
       "isbn": "L0012",
-      "codigo_cliente": "C113",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9014,7 +8901,6 @@
     {
       "id_prestamo": "P000113",
       "isbn": "L0013",
-      "codigo_cliente": "C114",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9023,7 +8909,6 @@
     {
       "id_prestamo": "P000114",
       "isbn": "L0014",
-      "codigo_cliente": "C115",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9032,7 +8917,6 @@
     {
       "id_prestamo": "P000115",
       "isbn": "L0015",
-      "codigo_cliente": "C116",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9041,7 +8925,6 @@
     {
       "id_prestamo": "P000116",
       "isbn": "L0016",
-      "codigo_cliente": "C117",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9050,7 +8933,6 @@
     {
       "id_prestamo": "P000117",
       "isbn": "L0017",
-      "codigo_cliente": "C118",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9059,7 +8941,6 @@
     {
       "id_prestamo": "P000118",
       "isbn": "L0018",
-      "codigo_cliente": "C119",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9068,7 +8949,6 @@
     {
       "id_prestamo": "P000119",
       "isbn": "L0019",
-      "codigo_cliente": "C120",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-20",
       "fecha_devolucion_estimada": "2025-12-04",
@@ -9077,7 +8957,6 @@
     {
       "id_prestamo": "P000120",
       "isbn": "L0020",
-      "codigo_cliente": "C121",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9086,7 +8965,6 @@
     {
       "id_prestamo": "P000121",
       "isbn": "L0001",
-      "codigo_cliente": "C122",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9095,7 +8973,6 @@
     {
       "id_prestamo": "P000122",
       "isbn": "L0002",
-      "codigo_cliente": "C123",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9104,7 +8981,6 @@
     {
       "id_prestamo": "P000123",
       "isbn": "L0003",
-      "codigo_cliente": "C124",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9113,7 +8989,6 @@
     {
       "id_prestamo": "P000124",
       "isbn": "L0004",
-      "codigo_cliente": "C125",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9122,7 +8997,6 @@
     {
       "id_prestamo": "P000125",
       "isbn": "L0005",
-      "codigo_cliente": "C126",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9131,7 +9005,6 @@
     {
       "id_prestamo": "P000126",
       "isbn": "L0006",
-      "codigo_cliente": "C127",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9140,7 +9013,6 @@
     {
       "id_prestamo": "P000127",
       "isbn": "L0007",
-      "codigo_cliente": "C128",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9149,7 +9021,6 @@
     {
       "id_prestamo": "P000128",
       "isbn": "L0008",
-      "codigo_cliente": "C129",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9158,7 +9029,6 @@
     {
       "id_prestamo": "P000129",
       "isbn": "L0009",
-      "codigo_cliente": "C130",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9167,7 +9037,6 @@
     {
       "id_prestamo": "P000130",
       "isbn": "L0010",
-      "codigo_cliente": "C131",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9176,7 +9045,6 @@
     {
       "id_prestamo": "P000131",
       "isbn": "L0011",
-      "codigo_cliente": "C132",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9185,7 +9053,6 @@
     {
       "id_prestamo": "P000132",
       "isbn": "L0012",
-      "codigo_cliente": "C133",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9194,7 +9061,6 @@
     {
       "id_prestamo": "P000133",
       "isbn": "L0013",
-      "codigo_cliente": "C134",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9203,7 +9069,6 @@
     {
       "id_prestamo": "P000134",
       "isbn": "L0014",
-      "codigo_cliente": "C135",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9212,7 +9077,6 @@
     {
       "id_prestamo": "P000135",
       "isbn": "L0015",
-      "codigo_cliente": "C136",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9221,7 +9085,6 @@
     {
       "id_prestamo": "P000136",
       "isbn": "L0016",
-      "codigo_cliente": "C137",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9230,7 +9093,6 @@
     {
       "id_prestamo": "P000137",
       "isbn": "L0017",
-      "codigo_cliente": "C138",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9239,7 +9101,6 @@
     {
       "id_prestamo": "P000138",
       "isbn": "L0018",
-      "codigo_cliente": "C139",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9248,7 +9109,6 @@
     {
       "id_prestamo": "P000139",
       "isbn": "L0019",
-      "codigo_cliente": "C140",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9257,7 +9117,6 @@
     {
       "id_prestamo": "P000140",
       "isbn": "L0020",
-      "codigo_cliente": "C141",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9266,7 +9125,6 @@
     {
       "id_prestamo": "P000141",
       "isbn": "L0001",
-      "codigo_cliente": "C142",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9275,7 +9133,6 @@
     {
       "id_prestamo": "P000142",
       "isbn": "L0002",
-      "codigo_cliente": "C143",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9284,7 +9141,6 @@
     {
       "id_prestamo": "P000143",
       "isbn": "L0003",
-      "codigo_cliente": "C144",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-21",
       "fecha_devolucion_estimada": "2025-12-05",
@@ -9293,7 +9149,6 @@
     {
       "id_prestamo": "P000144",
       "isbn": "L0004",
-      "codigo_cliente": "C145",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9302,7 +9157,6 @@
     {
       "id_prestamo": "P000145",
       "isbn": "L0005",
-      "codigo_cliente": "C146",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9311,7 +9165,6 @@
     {
       "id_prestamo": "P000146",
       "isbn": "L0006",
-      "codigo_cliente": "C147",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9320,7 +9173,6 @@
     {
       "id_prestamo": "P000147",
       "isbn": "L0007",
-      "codigo_cliente": "C148",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9329,7 +9181,6 @@
     {
       "id_prestamo": "P000148",
       "isbn": "L0008",
-      "codigo_cliente": "C149",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9338,7 +9189,6 @@
     {
       "id_prestamo": "P000149",
       "isbn": "L0009",
-      "codigo_cliente": "C150",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9347,7 +9197,6 @@
     {
       "id_prestamo": "P000150",
       "isbn": "L0010",
-      "codigo_cliente": "C151",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9356,7 +9205,6 @@
     {
       "id_prestamo": "P000151",
       "isbn": "L0011",
-      "codigo_cliente": "C152",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9365,7 +9213,6 @@
     {
       "id_prestamo": "P000152",
       "isbn": "L0012",
-      "codigo_cliente": "C153",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9374,7 +9221,6 @@
     {
       "id_prestamo": "P000153",
       "isbn": "L0013",
-      "codigo_cliente": "C154",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9383,7 +9229,6 @@
     {
       "id_prestamo": "P000154",
       "isbn": "L0014",
-      "codigo_cliente": "C155",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9392,7 +9237,6 @@
     {
       "id_prestamo": "P000155",
       "isbn": "L0015",
-      "codigo_cliente": "C156",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9401,7 +9245,6 @@
     {
       "id_prestamo": "P000156",
       "isbn": "L0016",
-      "codigo_cliente": "C157",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9410,7 +9253,6 @@
     {
       "id_prestamo": "P000157",
       "isbn": "L0017",
-      "codigo_cliente": "C158",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9419,7 +9261,6 @@
     {
       "id_prestamo": "P000158",
       "isbn": "L0018",
-      "codigo_cliente": "C159",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9428,7 +9269,6 @@
     {
       "id_prestamo": "P000159",
       "isbn": "L0019",
-      "codigo_cliente": "C160",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9437,7 +9277,6 @@
     {
       "id_prestamo": "P000160",
       "isbn": "L0020",
-      "codigo_cliente": "C161",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9446,7 +9285,6 @@
     {
       "id_prestamo": "P000161",
       "isbn": "L0001",
-      "codigo_cliente": "C162",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9455,7 +9293,6 @@
     {
       "id_prestamo": "P000162",
       "isbn": "L0002",
-      "codigo_cliente": "C163",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9464,7 +9301,6 @@
     {
       "id_prestamo": "P000163",
       "isbn": "L0003",
-      "codigo_cliente": "C164",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9473,7 +9309,6 @@
     {
       "id_prestamo": "P000164",
       "isbn": "L0004",
-      "codigo_cliente": "C165",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9482,7 +9317,6 @@
     {
       "id_prestamo": "P000165",
       "isbn": "L0005",
-      "codigo_cliente": "C166",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9491,7 +9325,6 @@
     {
       "id_prestamo": "P000166",
       "isbn": "L0006",
-      "codigo_cliente": "C167",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9500,7 +9333,6 @@
     {
       "id_prestamo": "P000167",
       "isbn": "L0007",
-      "codigo_cliente": "C168",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-22",
       "fecha_devolucion_estimada": "2025-12-06",
@@ -9509,7 +9341,6 @@
     {
       "id_prestamo": "P000168",
       "isbn": "L0008",
-      "codigo_cliente": "C169",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9518,7 +9349,6 @@
     {
       "id_prestamo": "P000169",
       "isbn": "L0009",
-      "codigo_cliente": "C170",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9527,7 +9357,6 @@
     {
       "id_prestamo": "P000170",
       "isbn": "L0010",
-      "codigo_cliente": "C171",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9536,7 +9365,6 @@
     {
       "id_prestamo": "P000171",
       "isbn": "L0011",
-      "codigo_cliente": "C172",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9545,7 +9373,6 @@
     {
       "id_prestamo": "P000172",
       "isbn": "L0012",
-      "codigo_cliente": "C173",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9554,7 +9381,6 @@
     {
       "id_prestamo": "P000173",
       "isbn": "L0013",
-      "codigo_cliente": "C174",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9563,7 +9389,6 @@
     {
       "id_prestamo": "P000174",
       "isbn": "L0014",
-      "codigo_cliente": "C175",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9572,7 +9397,6 @@
     {
       "id_prestamo": "P000175",
       "isbn": "L0015",
-      "codigo_cliente": "C176",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9581,7 +9405,6 @@
     {
       "id_prestamo": "P000176",
       "isbn": "L0016",
-      "codigo_cliente": "C177",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9590,7 +9413,6 @@
     {
       "id_prestamo": "P000177",
       "isbn": "L0017",
-      "codigo_cliente": "C178",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9599,7 +9421,6 @@
     {
       "id_prestamo": "P000178",
       "isbn": "L0018",
-      "codigo_cliente": "C179",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9608,7 +9429,6 @@
     {
       "id_prestamo": "P000179",
       "isbn": "L0019",
-      "codigo_cliente": "C180",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9617,7 +9437,6 @@
     {
       "id_prestamo": "P000180",
       "isbn": "L0020",
-      "codigo_cliente": "C181",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9626,7 +9445,6 @@
     {
       "id_prestamo": "P000181",
       "isbn": "L0001",
-      "codigo_cliente": "C182",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9635,7 +9453,6 @@
     {
       "id_prestamo": "P000182",
       "isbn": "L0002",
-      "codigo_cliente": "C183",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9644,7 +9461,6 @@
     {
       "id_prestamo": "P000183",
       "isbn": "L0003",
-      "codigo_cliente": "C184",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9653,7 +9469,6 @@
     {
       "id_prestamo": "P000184",
       "isbn": "L0004",
-      "codigo_cliente": "C185",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9662,7 +9477,6 @@
     {
       "id_prestamo": "P000185",
       "isbn": "L0005",
-      "codigo_cliente": "C186",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9671,7 +9485,6 @@
     {
       "id_prestamo": "P000186",
       "isbn": "L0006",
-      "codigo_cliente": "C187",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9680,7 +9493,6 @@
     {
       "id_prestamo": "P000187",
       "isbn": "L0007",
-      "codigo_cliente": "C188",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9689,7 +9501,6 @@
     {
       "id_prestamo": "P000188",
       "isbn": "L0008",
-      "codigo_cliente": "C189",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9698,7 +9509,6 @@
     {
       "id_prestamo": "P000189",
       "isbn": "L0009",
-      "codigo_cliente": "C190",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9707,7 +9517,6 @@
     {
       "id_prestamo": "P000190",
       "isbn": "L0010",
-      "codigo_cliente": "C191",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9716,7 +9525,6 @@
     {
       "id_prestamo": "P000191",
       "isbn": "L0011",
-      "codigo_cliente": "C192",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-23",
       "fecha_devolucion_estimada": "2025-12-07",
@@ -9725,7 +9533,6 @@
     {
       "id_prestamo": "P000192",
       "isbn": "L0012",
-      "codigo_cliente": "C193",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9734,7 +9541,6 @@
     {
       "id_prestamo": "P000193",
       "isbn": "L0013",
-      "codigo_cliente": "C194",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9743,7 +9549,6 @@
     {
       "id_prestamo": "P000194",
       "isbn": "L0014",
-      "codigo_cliente": "C195",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9752,7 +9557,6 @@
     {
       "id_prestamo": "P000195",
       "isbn": "L0015",
-      "codigo_cliente": "C196",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9761,7 +9565,6 @@
     {
       "id_prestamo": "P000196",
       "isbn": "L0016",
-      "codigo_cliente": "C197",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9770,7 +9573,6 @@
     {
       "id_prestamo": "P000197",
       "isbn": "L0017",
-      "codigo_cliente": "C198",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9779,7 +9581,6 @@
     {
       "id_prestamo": "P000198",
       "isbn": "L0018",
-      "codigo_cliente": "C199",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9788,7 +9589,6 @@
     {
       "id_prestamo": "P000199",
       "isbn": "L0019",
-      "codigo_cliente": "C200",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
@@ -9797,13 +9597,152 @@
     {
       "id_prestamo": "P000200",
       "isbn": "L0020",
-      "codigo_cliente": "C001",
       "sede_prestamo": "Sede 2",
       "fecha_prestamo": "2025-11-24",
       "fecha_devolucion_estimada": "2025-12-08",
       "estado": "PRESTADO"
     }
   ],
-
-  "log_operaciones": []
+  "log_operaciones": [
+    {
+      "id_operacion": "LOG-DEV-P000023",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000023\",\n  \"isbn\": \"L0003\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-DEV-P000005",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000005\",\n  \"isbn\": \"L0005\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-DEV-P000007",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000007\",\n  \"isbn\": \"L0007\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-DEV-P000008",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000008\",\n  \"isbn\": \"L0008\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-DEV-P000011",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000011\",\n  \"isbn\": \"L0011\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-DEV-P000015",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000015\",\n  \"isbn\": \"L0015\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-DEV-P000018",
+      "timestamp": "2025-11-27",
+      "tipo": "DEVOLUCION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000018\",\n  \"isbn\": \"L0018\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-11-30\",\n  \"estado\": \"DEVUELTO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000001",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000001\",\n  \"isbn\": \"L0001\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000002",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000002\",\n  \"isbn\": \"L0002\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000004",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000004\",\n  \"isbn\": \"L0004\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000006",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000006\",\n  \"isbn\": \"L0006\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000009",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000009\",\n  \"isbn\": \"L0009\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000010",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000010\",\n  \"isbn\": \"L0010\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000012",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000012\",\n  \"isbn\": \"L0012\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000013",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000013\",\n  \"isbn\": \"L0013\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000014",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000014\",\n  \"isbn\": \"L0014\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000016",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000016\",\n  \"isbn\": \"L0016\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000017",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000017\",\n  \"isbn\": \"L0017\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000019",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000019\",\n  \"isbn\": \"L0019\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    },
+    {
+      "id_operacion": "LOG-REN-P000020",
+      "timestamp": "2025-11-27",
+      "tipo": "RENOVACION",
+      "nodo_emisor": "sede1",
+      "payload": "{\n  \"id_prestamo\": \"P000020\",\n  \"isbn\": \"L0020\",\n  \"sede_prestamo\": \"Sede 1\",\n  \"fecha_prestamo\": \"2025-11-16\",\n  \"fecha_devolucion_estimada\": \"2025-12-04\",\n  \"estado\": \"PRESTADO\"\n}"
+    }
+  ]
 }

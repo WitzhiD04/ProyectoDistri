@@ -46,19 +46,17 @@ public class ActorDev {
                 String isbn = tokenizer.nextToken();
 
                 LogOperacion log = ga.registrarDevolucion(isbn, ga.getIdSede());
-                String mensajePS;
 
                 if (log == null) {
-                    mensajePS = "No se pudó realizar la devolución exitosamente";
+                    System.err.println("No se pudo realizar la devolución exitosamente");
                 } else {
-                    mensajePS = "Devolución exitosa con id: " + log.getId_operacion();
+                    System.out.println("Devolución exitosa con id: " + log.getId_operacion());
                     String jsonLog = gson.toJson(log);
                     socketReplicacion.send(jsonLog.getBytes(ZMQ.CHARSET), 0);
                     System.out.println("Log de replicación enviado a Sede Remota.");
                 }
-                socket.send(mensajePS);
-                //String respuesta = "Devolución realizada para " + mensajeString;
-                //socket.send(respuesta.getBytes());
+
+                // SUB no puede enviar respuesta, solo procesa
             }
         }
     }

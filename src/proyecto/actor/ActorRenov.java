@@ -15,8 +15,10 @@ public class ActorRenov {
     private String host;
     private GestorAlmacenamiento ga;
     private final Gson gson = new Gson();
-    private final String hostRemoto;
-    private final int puertoReplicacionRemoto;
+    private String hostRemoto;
+    private int puertoReplicacionRemoto;
+    private ZMQ.Socket socketReplicacion;
+    private ZContext context;
 
     public ActorRenov(String host, int puerto, String hostRemoto, int puertoReplicacionRemoto, String sede) {
         this.host = host;
@@ -26,38 +28,79 @@ public class ActorRenov {
         this.ga = new GestorAlmacenamiento(sede);
     }
 
-    public void renovacion () {
-        try (ZContext context = new ZContext()) {
-            ZMQ.Socket socket = context.createSocket(SocketType.SUB);
-            socket.connect("tcp://" + host + ":" + puerto);
-            socket.subscribe("");
-            System.out.println("Actor Renovación en linea");
+    public void renovacion() {
+        context = new ZContext();
 
-            while (!Thread.currentThread().isInterrupted()) {
-                byte[] mensaje = socket.recv();
-                String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();
-                System.out.println("Mensaje recibido: " + mensajeString);
+        ZMQ.Socket socket = context.createSocket(SocketType.SUB);
+        socket.connect("tcp://" + host + ":" + puerto);
+        socket.subscribe("");
+        System.out.println("Actor Renovación en linea");
 
-                ZMQ.Socket socketReplicacion = context.createSocket(SocketType.PUSH);
-                socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
+        // Socket para escuchar cambios de master
+        ZMQ.Socket subscriber = context.createSocket(SocketType.SUB);
+        subscriber.connect("tcp://localhost:8000");
+        subscriber.subscribe("");
+        subscriber.setReceiveTimeOut(100);
 
-                StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
-                tokenizer.nextToken();
-                String isbn = tokenizer.nextToken();
+        socketReplicacion = context.createSocket(SocketType.PUSH);
+        socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
 
-                LogOperacion log = ga.registrarRenovacion(isbn, ga.getIdSede());
-                String mensajePS;
+        ZMQ.Poller poller = context.createPoller(2);
+        poller.register(socket, ZMQ.Poller.POLLIN);
+        poller.register(subscriber, ZMQ.Poller.POLLIN);
 
-                if (log == null) {
-                    mensajePS = "No se pudó realizar la renovación exitosamente";
-                } else {
-                    mensajePS = "Renovación exitosa con id: " + log.getId_operacion();
-                    String jsonLog = gson.toJson(log);
-                    socketReplicacion.send(jsonLog.getBytes(ZMQ.CHARSET), 0);
-                    System.out.println("Log de replicación enviado a Sede Remota.");
+        while (!Thread.currentThread().isInterrupted()) {
+            poller.poll(100);
+
+            // Verificar cambios de master
+            if (poller.pollin(1)) {
+                String mensaje = subscriber.recvStr();
+                if (mensaje != null && mensaje.startsWith("MASTER_ACTIVO:GA2:")) {
+                    System.out.println("*** FAILOVER - Cambiando replicación a GA2 ***");
+                    reconectarReplicacion("localhost", 6006);
+                } else if (mensaje != null && mensaje.startsWith("MASTER_ACTIVO:GA1:")) {
+                    System.out.println("*** FAILBACK - Restaurando replicación a GA1 ***");
+                    reconectarReplicacion(hostRemoto, puertoReplicacionRemoto);
                 }
-                socket.send(mensajePS);
+            }
+
+            // Procesar renovaciones
+            if (poller.pollin(0)) {
+                byte[] mensaje = socket.recv(ZMQ.DONTWAIT);
+                if (mensaje != null) {
+                    procesarRenovacion(socket, new String(mensaje, ZMQ.CHARSET).trim());
+                }
             }
         }
+    }
+
+    private void reconectarReplicacion(String nuevoHost, int nuevoPuerto) {
+        if (socketReplicacion != null) {
+            socketReplicacion.close();
+        }
+        socketReplicacion = context.createSocket(SocketType.PUSH);
+        socketReplicacion.connect("tcp://" + nuevoHost + ":" + nuevoPuerto);
+        System.out.println("Replicación reconectada a " + nuevoHost + ":" + nuevoPuerto);
+    }
+
+    private void procesarRenovacion(ZMQ.Socket socket, String mensajeString) {
+        System.out.println("Mensaje recibido: " + mensajeString);
+
+        StringTokenizer tokenizer = new StringTokenizer(mensajeString, " ");
+        tokenizer.nextToken();
+        String isbn = tokenizer.nextToken();
+
+        LogOperacion log = ga.registrarRenovacion(isbn, ga.getIdSede());
+        String mensajePS;
+
+        if (log == null) {
+            mensajePS = "No se pudó realizar la renovación exitosamente";
+        } else {
+            mensajePS = "Renovación exitosa con id: " + log.getId_operacion();
+            String jsonLog = gson.toJson(log);
+            socketReplicacion.send(jsonLog.getBytes(ZMQ.CHARSET), 0);
+            System.out.println("Log de replicación enviado a Sede Remota.");
+        }
+        socket.send(mensajePS);
     }
 }

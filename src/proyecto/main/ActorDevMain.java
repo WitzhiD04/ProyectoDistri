@@ -28,7 +28,7 @@ public class ActorDevMain {
         } else if (sede == 2) {
             puerto = 5005;
             idSede = "sede2";
-            puertoRemotoReplicacion = 6006;
+            puertoRemotoReplicacion = 6007;
         } else {
             idSede = "0";
             puertoRemotoReplicacion = 0;

@@ -37,6 +37,7 @@ public class ActorRenov {
             ZMQ.Socket socketReplicacion = context.createSocket(SocketType.PUSH);
             socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
 
+
             while (!Thread.currentThread().isInterrupted()) {
                 byte[] mensaje = socket.recv();
                 String mensajeString = new String(mensaje, ZMQ.CHARSET).trim();

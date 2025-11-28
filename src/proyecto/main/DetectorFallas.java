@@ -34,10 +34,10 @@ public class DetectorFallas {
 
             while (!Thread.currentThread().isInterrupted()) {
 
-                chequeadorGA1.send("PING_GC");
+                chequeadorGA1.send("PING");
                 String respuestaGA1 = chequeadorGA1.recvStr();
 
-                boolean GA1_estaActivo = (respuestaGA1 != null && respuestaGA1.equals("PONG_GC"));
+                boolean GA1_estaActivo = (respuestaGA1 != null && respuestaGA1.equals("PONG sede1"));
 
                 if (GA1_estaActivo) {
 
@@ -49,7 +49,7 @@ public class DetectorFallas {
                     chequeadorGA2.send("PING");
                     String respuestaGA2 = chequeadorGA2.recvStr();
 
-                    boolean GA2_estaActivo = (respuestaGA2 != null && respuestaGA2.equals("OK sede2"));
+                    boolean GA2_estaActivo = (respuestaGA2 != null && respuestaGA2.equals("PONG sede2"));
 
                     if (GA2_estaActivo) {
                         System.out.println("FAILOVER: GA2 está UP. PROMOVIENDO a nuevo Master.");

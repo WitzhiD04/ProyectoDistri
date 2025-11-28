@@ -2,6 +2,7 @@ package proyecto.main;
 
 import proyecto.gestor.GestorAlmacenamiento;
 
+
 public class GestorInstancias {
 
     // Almacena la única instancia de GestorAlmacenamiento por proceso.

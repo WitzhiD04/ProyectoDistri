@@ -16,7 +16,7 @@ public class ActorDev {
     private GestorAlmacenamiento ga;
     private final Gson gson = new Gson();
     private final String hostRemoto;
-    private final int puertoReplicacionRemoto;
+    private  int puertoReplicacionRemoto;
 
     public ActorDev(String host, int puerto, String hostRemoto, int puertoReplicacionRemoto, String sede) {
         this.puerto  = puerto;
@@ -26,13 +26,15 @@ public class ActorDev {
         this.ga = new GestorAlmacenamiento(sede);
     }
 
+
+
     public void devolucion () {
         try (ZContext context = new ZContext()) {
             ZMQ.Socket socket = context.createSocket(SocketType.SUB);
             socket.connect("tcp://" + host + ":" + puerto);
             socket.subscribe("");
             System.out.println("Actor Devolucion en linea");
-
+            escucharDetector();
             ZMQ.Socket socketReplicacion = context.createSocket(SocketType.PUSH);
             socketReplicacion.connect("tcp://" + hostRemoto + ":" + puertoReplicacionRemoto);
 
@@ -58,6 +60,30 @@ public class ActorDev {
 
                 // SUB no puede enviar respuesta, solo procesa
             }
+        }
+    }
+
+
+    public void escucharDetector() {
+
+        try (ZContext context = new ZContext()) {
+
+            ZMQ.Socket subDetector = context.createSocket(SocketType.SUB);
+            subDetector.connect("tcp://localhost:8000");
+            subDetector.subscribe("");
+            System.out.println("ActorDev escuchando al DetectorFallas en puerto 8000...");
+
+            String mensaje = subDetector.recvStr().trim();
+            System.out.println("Mensaje detector → " + mensaje);
+
+            if (mensaje.startsWith("MASTER_ACTIVO:GA1")) {
+                puertoReplicacionRemoto = 6007;
+            }
+
+            if (mensaje.startsWith("MASTER_ACTIVO:GA2")) {
+                puertoReplicacionRemoto = 6006;
+            }
+
         }
     }
 }
